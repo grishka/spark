@@ -25,10 +25,10 @@
 
     <properties>
         <java.version>17</java.version>
-        <jetty.version>9.4.48.v20220622</jetty.version>
+        <jetty.version>10.0.15</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <powermock.version>1.7.4</powermock.version>
-        <mockito.version>1.10.19</mockito.version>
+        <powermock.version>2.0.9</powermock.version>
+        <mockito.version>5.4.0</mockito.version>
     </properties>
 
     <dependencies>
@@ -61,7 +61,7 @@
 
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-server</artifactId>
+            <artifactId>websocket-jetty-server</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
@@ -91,7 +91,7 @@
         </dependency>
         <dependency>
             <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito</artifactId>
+            <artifactId>powermock-api-mockito2</artifactId>
             <version>${powermock.version}</version>
             <scope>test</scope>
         </dependency>
@@ -115,7 +115,7 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-client</artifactId>
+            <artifactId>websocket-jetty-client</artifactId>
             <version>${jetty.version}</version>
             <scope>test</scope>
         </dependency>
@@ -159,6 +159,12 @@
                 <configuration>
                     <forkCount>1</forkCount>
                     <reuseForks>false</reuseForks>
+                    <argLine>
+                        --add-opens java.base/java.lang=ALL-UNNAMED
+                        --add-opens java.base/java.time=ALL-UNNAMED
+                        --add-opens java.base/java.time.format=ALL-UNNAMED
+                        --add-opens java.base/java.util=ALL-UNNAMED
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>
