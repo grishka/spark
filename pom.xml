@@ -16,11 +16,15 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git@github.com:perwendel/spark.git</connection>
-        <developerConnection>scm:git:git@github.com:perwendel/spark.git</developerConnection>
-        <url>scm:git:git@github.com:perwendel/spark.git</url>
+        <connection>scm:git:git@github.com:grishka/spark.git</connection>
+        <developerConnection>scm:git:git@github.com:grishka/spark.git</developerConnection>
+        <url>scm:git:git@github.com:grishka/spark.git</url>
     </scm>
     <developers>
+        <developer>
+            <name>Gregory K</name>
+            <email>mavencentral@grishka.me</email>
+        </developer>
     </developers>
 
     <properties>
