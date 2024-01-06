@@ -16,6 +16,8 @@
  */
 package spark;
 
+import org.eclipse.jetty.util.VirtualThreads;
+
 import spark.embeddedserver.jetty.EmbeddedJettyServer;
 import spark.embeddedserver.jetty.JettyHandler;
 import spark.http.matching.MatcherFilter;
@@ -1343,5 +1345,9 @@ public class Spark {
     public static void addServletEventListener(EventListener listener){
         EmbeddedJettyServer ejs=(EmbeddedJettyServer) getInstance().server;
         ejs.getHandler().addEventListener(listener);
+    }
+
+    public static void useVirtualThreadPool(){
+        getInstance().setUseVirtualThreads(true);
     }
 }
