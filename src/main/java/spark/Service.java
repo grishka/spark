@@ -637,13 +637,7 @@ public final class Service extends Routable {
 
                     if(useVirtualThreads && server instanceof EmbeddedJettyServer ejs){
                         QueuedThreadPool pool=new QueuedThreadPool();
-                        pool.setVirtualThreadsExecutor(Executors.newThreadPerTaskExecutor(new ThreadFactory(){
-                            private int counter=0;
-                            @Override
-                            public Thread newThread(Runnable r){
-                                return Thread.ofVirtual().name("VirtualThread-"+(counter++)).unstarted(r);
-                            }
-                        }));
+                        pool.setVirtualThreadsExecutor(Executors.newThreadPerTaskExecutor(Thread.ofVirtual().name("ServerThread-", 0).factory()));
                         ejs.withThreadPool(pool);
                     }
 

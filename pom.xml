@@ -4,7 +4,7 @@
     <groupId>me.grishka.sparkjava</groupId>
     <artifactId>spark-core</artifactId>
     <packaging>bundle</packaging>
-    <version>2.9.4+patch.2</version>
+    <version>2.9.4+patch.3</version>
     <name>Spark</name>
     <description>A micro framework for creating web applications in Kotlin and Java 8 with minimal effort</description>
     <url>http://www.sparkjava.com</url>
@@ -40,13 +40,13 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>2.0.16</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>2.0.16</version>
             <scope>test</scope>
         </dependency>
 
@@ -177,6 +177,7 @@
                 <version>3.0.1</version>
                 <configuration>
                     <failOnError>false</failOnError>
+                    <doclint>none</doclint>
                 </configuration>
             </plugin>
             <plugin>
