@@ -5,12 +5,11 @@
 Spark - a tiny web framework for Java 8
 ==============================================
 
-**Spark 2.9.4 is out!!**
 ```xml
 <dependency>
-    <groupId>com.sparkjava</groupId>
+    <groupId>me.grishka.sparkjava</groupId>
     <artifactId>spark-core</artifactId>
-    <version>2.9.4</version>
+    <version>2.9.4+patch.3</version>
 </dependency>
 ```
 
@@ -24,14 +23,21 @@ Javadoc: http://javadoc.io/doc/com.sparkjava/spark-core
 
 When committing to the project please use Spark format configured in https://github.com/perwendel/spark/blob/master/config/spark_formatter_intellij.xml
 
+## Changes in this fork
+- Jetty updated to version 11
+- Other dependencies updated to more recent versions as well
+- Added support for Java 21 virtual threads
+- Added support for response streaming via custom serializers
+- Added support for running as a module
+
 Getting started
 ---------------
 
 ```xml
 <dependency>
-    <groupId>com.sparkjava</groupId>
+    <groupId>me.grishka.sparkjava</groupId>
     <artifactId>spark-core</artifactId>
-    <version>2.9.4</version>
+    <version>2.9.4+patch.3</version>
 </dependency>
 ```
 
