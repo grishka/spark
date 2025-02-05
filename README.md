@@ -9,7 +9,7 @@ Spark - a tiny web framework for Java 8
 <dependency>
     <groupId>me.grishka.sparkjava</groupId>
     <artifactId>spark-core</artifactId>
-    <version>2.9.4+patch.3</version>
+    <version>2.9.4+patch.4</version>
 </dependency>
 ```
 

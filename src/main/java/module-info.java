@@ -2,6 +2,8 @@ module spark {
     exports spark;
     exports spark.utils;
     exports spark.serialization;
+    exports spark.embeddedserver;
+    exports spark.embeddedserver.jetty;
 
     requires java.sql;
 
